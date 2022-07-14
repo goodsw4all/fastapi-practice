@@ -18,7 +18,7 @@ def index(page=1, page_size: Optional[int] = None):
     return {'message': f'All {page_size} blogs on page {page}'}
 
 
-@router.get('/blog/{id}/comments/{comment_id}', tags=['comment'])
+@router.get('/{id}/comments/{comment_id}', tags=['comment'])
 def get_comment(id: int, comment_id: int, valid: bool = True, username: Optional[str] = None):
     """
     Simulates retriving a comment of a blog
