@@ -33,7 +33,9 @@ def get_user(db: Session, id: int):
 
 
 def get_user_by_username(db: Session, username: str):
-    user = db.query(DbUser).filter(DbUser.id == username).first()
+    user = db.query(DbUser).filter(DbUser.username == username).first()
+    print(db.query(DbUser).all())
+
     # Handle errors
     if not user:
         raise HTTPException(

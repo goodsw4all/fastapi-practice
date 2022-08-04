@@ -5,3 +5,6 @@ passlib
 bcrypt
 python-multipart # Form data
 python-jose # jwt
+aiofiles
+requests
+pytest
