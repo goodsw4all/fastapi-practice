@@ -8,3 +8,5 @@ python-jose # jwt
 aiofiles
 requests
 pytest
+jinja2
+websockets
