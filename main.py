@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 
 from exceptions import StoryException
 
-from router import blog_get, blog_post, user, article, product, file
+from router import blog_get, blog_post, user, article, product, file, dependencies, ocr
 from templates import templates
 
 from auth import authentication
@@ -32,7 +32,8 @@ app.include_router(product.router)
 app.include_router(blog_get.router)
 app.include_router(blog_post.router)
 app.include_router(templates.router)
-
+app.include_router(dependencies.router)
+app.include_router(ocr.router)
 
 # Just fo test end-point in file
 # @app.get('/')
